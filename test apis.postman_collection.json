@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "a167460d-ae21-4fb5-864d-998f30801cab",
+		"name": "test apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27622348",
+		"_collection_link": "https://winter-escape-827811.postman.co/workspace/New-Team-Workspace~9a029eb4-2fc9-4985-b319-f04f919a3a1a/collection/27622348-a167460d-ae21-4fb5-864d-998f30801cab?action=share&source=collection_link&creator=27622348"
+	},
+	"item": [
+		{
+			"name": "Save Bulk Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/save-bulk-users/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"save-bulk-users",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profilePhoto",
+							"type": "file",
+							"src": "/C:/Users/pansh/Downloads/image.png"
+						},
+						{
+							"key": "user",
+							"value": "{\n  \"name\": \"John Doe\",\n  \"dob\": \"1990-05-15\",\n  \"username\": \"johndoe123\",\n  \"password\": \"securePassword123\",\n  \"gender\": \"MALE\",\n  \"email\": \"john.doe@example.com\",\n  \"address\": \"123 Main Street, Cityville\",\n  \"contactNumber\": 9876543210,\n  \"pinCode\": \"123456\"\n}\n",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/test/saveUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"saveUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/getUserDetails/john.doe@example.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"getUserDetails",
+						"john.doe@example.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
